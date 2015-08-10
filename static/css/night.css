@@ -7,6 +7,7 @@
     dark highlight color (hover): 1C1C1C
 */
 
+/* generic colors */
 #sidebar, #content, #bottom_bar, .options-menu, .controls, .modal-content, .dropdown-menu {
     background-color: #1D1F21;
 }
@@ -15,18 +16,84 @@ a, .modal-title, h1, h2, h3, h4, h5, h6 {
     color: #00BC8C;
 }
 
+body{
+    color: #d1d1d1;
+}
+
+/* button styling */
+/* special buttons - spot the reference! */
+.btn-bubbly {
+    background-image: none;
+    border: 0;
+    padding: 2px;
+    color: #d1d1d1;
+    background-color: rgba(0,0,0,0);
+}
+.btn-bubbly:hover {
+    background-image: none;
+    border: 0;
+    padding: 2px;
+    color: #00BC8C;
+}
+
+.btn-success {
+    background-color: #00B300;
+    background-image: none;
+    border: 0;
+}
+.btn-success:hover {
+    background-color: #00B500;
+    background-image: none;
+    border: 0;
+}
+
+.btn-danger {
+    background-color: #B30000;
+    background-image: none;
+    border: 0;
+}
+.btn-danger:hover {
+    background-color: #B50000;
+    background-image: none;
+    border: 0;
+}
+
+.btn-default {
+    background-color: #d1d1d1;
+    background-image: none;
+    color: #1C1C1C;
+    border: 0;
+}
+
+.btn-default:hover {
+    background-color: #d5d5d5;
+    background-image: none;
+    color: #1C1C1C;
+    border: 0;
+}
+
 .btn-primary, #repeat_badge, .navbar {
     background-color: #00BC8C;
     background-image: none;
     border: none;
 }
 
+.btn-primary:hover {
+    background-color: #004F3B;
+}
+
 .selected {
-background-color: #004F3B;
+background-color: #00BC8C;
+color: #1D1F21;
 }
 
 .btn-primary, .btn, .btn-default, .btn-success, .modal-content, .form-control {
     border-radius: 0;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:active {
+    background-color: #00BC8C;
+    color: #1D1F21;
 }
 
 /* naturally, these 2 are copied from libs.min.css */
@@ -40,16 +107,18 @@ background-color: #004F3B;
     background-color: #004F3B;
 }
 
-body, .dropdown-menu>li>a {
-    color: #d1d1d1;
+/* dropdown menu styling */
+.dropdown-menu>li>a {
+    color: #00BC8C;
 }
 
+/* misc */
 .controls {
     color: #555555;
 }
 
-.close {
-    color:#d1d1d1;
+.close, .close:hover {
+    color: #00BC8C;
 }
 
 /* box shadows */
@@ -57,14 +126,13 @@ body, .dropdown-menu>li>a {
     box-shadow: -10px 0px 5px #1D1F21;
 }
 #sidebar {
-box-shadow: 0 0 20px #1C1C1C;
+box-shadow: 0 0 20px #2B2B2B;
 }
 #bottom_bar {
-    box-shadow: 0 0 30px #1C1C1C;
+    box-shadow: 0 0 30px #2B2B2B;
 }
 
-/* hovers */
-
+/* misc hovers */
 .slider.slider-horizontal:hover .slider-track{
   background: #00BC8C;
 }
@@ -85,6 +153,7 @@ box-shadow: 0 0 20px #1C1C1C;
   color: #004F3B;
 }
 
+/* scrollbars */
 .custom_scrollbar::-webkit-scrollbar-thumb:vertical,
 .custom_scrollbar::-webkit-scrollbar-thumb:horizontal {
   background: #004F3B;
@@ -95,13 +164,14 @@ box-shadow: 0 0 20px #1C1C1C;
   background: #00BC8C;
 }
 
+/* random */
 #bottom_bar:hover .current_time,
 #bottom_bar:hover .duration{
   display: block;
   background-color: #00BC8C;
   z-index: 2;
   padding: 2px;
-  color: #d1d1d1;
+  color: #1D1F21;
 }
 
 tr:hover{
@@ -118,4 +188,9 @@ background-color: #1C1C1C;
 }
 .blue {
   color: #00BC8C;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #1C1C1C;
+    color: #d1d1d1;
 }
