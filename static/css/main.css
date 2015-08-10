@@ -309,16 +309,7 @@ tr:hover .options{
 .options_container{
   position: fixed;
 }
-/*** color definitions ***/
-.blue{
-  color: #4BF;
-}
-.light-blue{
-  background-color: #DDEEFF;
-}
-.selected{
-  background-color: #DDEEFF;
-}
+
 /*** custom scrollbar ***/
 .custom_scrollbar::-webkit-scrollbar {
   width: 10px;

@@ -1,0 +1,121 @@
+/* night theme by ohnx (2015) */
+/* color scheme:
+    base color: 1D1F21
+    light accent color: 00BC8C
+    dark accent color: 004F3B
+    light highlight color (font): d1d1d1
+    dark highlight color (hover): 1C1C1C
+*/
+
+#sidebar, #content, #bottom_bar, .options-menu, .controls, .modal-content, .dropdown-menu {
+    background-color: #1D1F21;
+}
+
+a, .modal-title, h1, h2, h3, h4, h5, h6 {
+    color: #00BC8C;
+}
+
+.btn-primary, #repeat_badge, .navbar {
+    background-color: #00BC8C;
+    background-image: none;
+    border: none;
+}
+
+.selected {
+background-color: #004F3B;
+}
+
+.btn-primary, .btn, .btn-default, .btn-success, .modal-content, .form-control {
+    border-radius: 0;
+}
+
+/* naturally, these 2 are copied from libs.min.css */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #fff;
+    background-color: #004F3B;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #004F3B;
+}
+
+body, .dropdown-menu>li>a {
+    color: #d1d1d1;
+}
+
+.controls {
+    color: #555555;
+}
+
+.close {
+    color:#d1d1d1;
+}
+
+/* box shadows */
+.controls {
+    box-shadow: -10px 0px 5px #1D1F21;
+}
+#sidebar {
+box-shadow: 0 0 20px #1C1C1C;
+}
+#bottom_bar {
+    box-shadow: 0 0 30px #1C1C1C;
+}
+
+/* hovers */
+
+.slider.slider-horizontal:hover .slider-track{
+  background: #00BC8C;
+}
+.slider.slider-horizontal .slider-track{
+  background: #00BC8C;
+}
+.slider-selection{
+  background: #00BC8C;
+}
+.slider.slider-horizontal .slider-handle{
+  background: #00BC8C;
+}
+.slider.slider-horizontal .slider-track-high{
+  background: #004F3B;
+}
+
+.info_options:hover{
+  color: #004F3B;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb:vertical,
+.custom_scrollbar::-webkit-scrollbar-thumb:horizontal {
+  background: #004F3B;
+}
+
+.custom_scrollbar::-webkit-scrollbar-thumb:vertical:hover,
+.custom_scrollbar::-webkit-scrollbar-thumb:horizontal:hover {
+  background: #00BC8C;
+}
+
+#bottom_bar:hover .current_time,
+#bottom_bar:hover .duration{
+  display: block;
+  background-color: #00BC8C;
+  z-index: 2;
+  padding: 2px;
+  color: #d1d1d1;
+}
+
+tr:hover{
+background-color: #1C1C1C;
+  color: #00BC8C;
+}
+
+.options:hover{
+  color: #004F3B;
+}
+.controls .fa:hover{
+  background-color: #1C1C1C;
+  color: #00BC8C;
+}
+.blue {
+  color: #00BC8C;
+}
