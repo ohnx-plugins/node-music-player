@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  
   <title>{% block title %}Desktop Command Remote{% endblock %}</title>
 
   <script type="text/javascript" src="/static/lib/headjs/head.min.js"></script>
@@ -12,8 +13,7 @@
   head.load(
     "/static/lib/font-awesome-bower/css/font-awesome.css",
     "/static/lib/libs.min.css",
-    "/static/css/main.css",
-    "/static/css/night.css"
+    "/static/css/main.css"
     );
   var music_dir = "{{music_dir}}";
   var music_dir_set = "{{music_dir_set}}" === "true";
@@ -65,7 +65,8 @@
       "/static/js/player/sidebarview.js",
       "/static/js/player/syncview.js",
       "/static/js/player/footer.js",
-      "/static/js/player/coverbox.js"
+      "/static/js/player/coverbox.js",
+      "/static/js/player/integration.js"
       );
   </script>
   {% block scripts %}
