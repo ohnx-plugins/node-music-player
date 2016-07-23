@@ -109,6 +109,7 @@ function musicRoute(req, res) {
         music_dir: app.get('config').music_dir,
         music_dir_set: app.get('config').music_dir_set,
         country_code: app.get('config').country_code,
+        require_auth_checked: app.get('config').require_auth?'checked':'',
         ip: ip + ':' + app.get('port'),
         remote_name: req.params.name,
       });
@@ -148,7 +149,7 @@ function downloadPlaylist(req, res) {
     if (err) throw err;
 
     // create zip
-    var filename = os.tmpdir() + '/download.zip';
+    var filename = path.join(os.tmpdir(), '/download.zip');
     var archive = archiver('zip');
     async.forEach(playlist.songs, function(item, callback) {
       app.db.songs.findOne({_id: item._id}, function(err, song) {
@@ -575,6 +576,17 @@ function updateSettings(req) {
       app.db.settings.insert({key: 'country_code', value: req.data.country_code}, function() {
         // update config
         app.get('config').country_code = req.data.country_code;
+      });
+    });
+  }
+  
+  if (req.data.require_auth) {
+    // first remove all require_auth settings
+    app.db.settings.remove({key: 'require_auth'}, {multi: true}, function() {
+      // add a new one in
+      app.db.settings.insert({key: 'require_auth', value: req.data.require_auth}, function() {
+        // update config
+        app.get('config').require_auth = req.data.require_auth;
       });
     });
   }
