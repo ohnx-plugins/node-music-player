@@ -13,6 +13,7 @@ function Config(app) {
   this.initialized = false;
   this.music_dir = '';
   this.music_dir_set = false;
+  this.require_auth = false;
   this.soundcloud = {
     dl_dir: 'soundcloud',
     client_id: '062e8dac092fe1ed9e16ee10dd88d566',
